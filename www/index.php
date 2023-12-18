@@ -1,8 +1,8 @@
 <?php
 
-require_once(dirname(__FILE__, 2) . '/src/config/database.php');
+require_once(dirname(__FILE__, 2) . '/src/config/config.php');
+require_once(dirname(__FILE__, 2) . '/src/models/User.php');
 
-$sql = 'SELECT * FROM users';
-$result = Database::getResultFromQuery($sql);
+$user = new User(['name' => 'teste', 'email' => 'teste@teste.com']);
 
-print_r($result);
+print_r($user);
