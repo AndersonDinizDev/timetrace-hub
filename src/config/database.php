@@ -20,4 +20,13 @@ class Database
       throw $err;
     }
   }
+
+  public static function getResultFromQuery($sql) {
+    $database = self::getConnection();
+    $stmt = $database->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $result;
+  }
 }
