@@ -25,8 +25,7 @@ class Database
     $database = self::getConnection();
     $stmt = $database->prepare($sql);
     $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    return $result;
-  }
+    return $stmt;
+}
 }
