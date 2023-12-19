@@ -1,14 +1,13 @@
 <?php
-
-require_once(realpath(MODEL_PATH . '/User.php'));
-
+loadModel('User');
 class Login extends Model
 {
 
-    public function checkLogin() {
+    public function checkLogin()
+    {
         $user = User::getOne(['email' => $this->email]);
-        if($user) {
-            if(password_verify($this->password, $user->password)) {
+        if ($user) {
+            if (password_verify($this->password, $user->password)) {
                 return $user;
             }
         }
