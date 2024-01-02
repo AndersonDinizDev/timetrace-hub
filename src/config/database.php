@@ -1,31 +1,34 @@
 <?php
 
-class Database
-{
-  public static function getConnection()
-  {
-    try {
-      $envPath = realpath(dirname(__FILE__) . '/../env.ini');
-      $env = parse_ini_file($envPath);
+class Database {
 
-      $host = $env['host'];
-      $db = $env['database'];
-      $username = $env['username'];
-      $password = $env['password'];
+    public static function getConnection() {
+        $envPath = realpath(dirname(__FILE__) . '/../env.ini');
+        $env = parse_ini_file($envPath);
+        $conn = new mysqli($env['host'], $env['username'],
+            $env['password'], $env['database']);
 
-      $database = new PDO("mysql:host=$host;dbname=$db", $username, $password);
-      $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      return $database;
-    } catch (PDOException $err) {
-      throw $err;
+        if($conn->connect_error) {
+            die("Erro: " . $conn->connect_error);
+        }
+
+        return $conn;
     }
-  }
 
-  public static function getResultFromQuery($sql) {
-    $database = self::getConnection();
-    $stmt = $database->prepare($sql);
-    $stmt->execute();
+    public static function getResultFromQuery($sql) {
+        $conn = self::getConnection();
+        $result = $conn->query($sql);
+        $conn->close();
+        return $result;
+    }
 
-    return $stmt;
-}
+    public static function executeSQL($sql) {
+        $conn = self::getConnection();
+        if(!mysqli_query($conn, $sql)) {
+            throw new Exception(mysqli_error($conn));
+        }
+        $id = $conn->insert_id;
+        $conn->close();
+        return $id;
+    }
 }
