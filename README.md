@@ -19,7 +19,7 @@
 
 ## Descrição:
 
-Uma loja online intuitiva, exclusivamente desenvolvida para atender às necessidades de uma instituição de ensino, oferecendo uma experiência de compra simplificada.
+Um projeto para gerenciamento de horário de trabalho dos funcionários de uma empresa.
 
 ## ✨ Novidades:
 
