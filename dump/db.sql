@@ -28,13 +28,13 @@ INSERT INTO users (id, name, password, email, start_date, end_date, is_admin)
 VALUES (1, 'Admin', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'admin@timetracehub.com.br', '2000-1-1', null, 1);
 
 INSERT INTO users (id, name, password, email, start_date, end_date, is_admin)
-VALUES (2, 'Chaves', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'chaves@timetracehub.com.br', '2000-1-1', null, 1);
+VALUES (2, 'Jorge', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'jorge@timetracehub.com.br', '2000-1-1', null, 1);
 
 INSERT INTO users (id, name, password, email, start_date, end_date, is_admin)
-VALUES (3, 'Seu Barriga', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'barriga@timetracehub.com.br', '2000-1-1', null, 0);
+VALUES (3, 'Mario', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'mario@timetracehub.com.br', '2000-1-1', null, 0);
 
 INSERT INTO users (id, name, password, email, start_date, end_date, is_admin)
-VALUES (4, 'Seu Madruga', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'madruga@timetracehub.com.br', '2000-1-1', null, 0);
+VALUES (4, 'Luiza', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'luiza@timetracehub.com.br', '2000-1-1', null, 0);
 
 INSERT INTO users (id, name, password, email, start_date, end_date, is_admin)
-VALUES (5, 'Quico', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'quico@ctimetracehub.com.br', '2000-1-1', '2019-1-1', 0);
+VALUES (5, 'Joana', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'joana@ctimetracehub.com.br', '2000-1-1', '2019-1-1', 0);
